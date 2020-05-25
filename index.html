@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Map</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    #map{
+        width: 100vw;
+        height: 100vh;
+
+    }
+</style>
+</head>
+<body>
+    <div id='map' ></div>
+    
+</body>
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiamFncnV0aTI2MSIsImEiOiJja2FtMWFrbWcwdnR3MnVsczVrZWNibWx1In0.ZpUM1zaxU3WZgu-YPjOH6g';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    zoom: 1,
+    center: [0,30]
+
+    
+  });
+  var popup = new mapboxgl.Popup({ offset: 25 }).setText(
+'Construction on the Washington Monument began in 1848.'
+);
+</script>
+
+<script src="index.js"></script>
+</html>
